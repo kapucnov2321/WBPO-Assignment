@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D9B3F38E3AC6F22BCFD3F20 /* Pods_WBPO_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857947EA73ACFA1E4B116B24 /* Pods_WBPO_Assignment.framework */; };
 		CF22B50D2BC575640034E750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B50C2BC575640034E750 /* AppDelegate.swift */; };
 		CF22B50F2BC575640034E750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B50E2BC575640034E750 /* SceneDelegate.swift */; };
 		CF22B5112BC575640034E750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5102BC575640034E750 /* ViewController.swift */; };
-		CF22B5142BC575640034E750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22B5122BC575640034E750 /* Main.storyboard */; };
 		CF22B5162BC575650034E750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF22B5152BC575650034E750 /* Assets.xcassets */; };
 		CF22B5192BC575650034E750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22B5172BC575650034E750 /* LaunchScreen.storyboard */; };
+		CF22B5232BC575EA0034E750 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5222BC575EA0034E750 /* UIViewController+Extension.swift */; };
+		CF22B5272BC5769B0034E750 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5262BC5769B0034E750 /* LoginViewController.swift */; };
+		CF22B5292BC576A20034E750 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22B5282BC576A20034E750 /* LoginViewController.storyboard */; };
+		CF22B52B2BC576A80034E750 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B52A2BC576A80034E750 /* LoginViewModel.swift */; };
+		CF22B52D2BC576B00034E750 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B52C2BC576B00034E750 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7438C600168BBF4E82E1614C /* Pods-WBPO-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBPO-Assignment.debug.xcconfig"; path = "Target Support Files/Pods-WBPO-Assignment/Pods-WBPO-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		7AD3005D736CE3704F629F1B /* Pods-WBPO-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBPO-Assignment.release.xcconfig"; path = "Target Support Files/Pods-WBPO-Assignment/Pods-WBPO-Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		857947EA73ACFA1E4B116B24 /* Pods_WBPO_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBPO_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF22B5092BC575640034E750 /* WBPO-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WBPO-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF22B50C2BC575640034E750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF22B50E2BC575640034E750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF22B5102BC575640034E750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF22B5132BC575640034E750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF22B5152BC575650034E750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF22B5182BC575650034E750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF22B51A2BC575650034E750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF22B5222BC575EA0034E750 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		CF22B5262BC5769B0034E750 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CF22B5282BC576A20034E750 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		CF22B52A2BC576A80034E750 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CF22B52C2BC576B00034E750 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9B3F38E3AC6F22BCFD3F20 /* Pods_WBPO_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AB9278E869E1AD741D3DB26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				857947EA73ACFA1E4B116B24 /* Pods_WBPO_Assignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF22B5002BC575640034E750 = {
 			isa = PBXGroup;
 			children = (
 				CF22B50B2BC575640034E750 /* WBPO-Assignment */,
 				CF22B50A2BC575640034E750 /* Products */,
+				FD66C16507E076CF73224D09 /* Pods */,
+				7AB9278E869E1AD741D3DB26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +79,60 @@
 		CF22B50B2BC575640034E750 /* WBPO-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				CF22B5202BC575D70034E750 /* Common */,
+				CF22B5242BC576880034E750 /* Scenes */,
 				CF22B50C2BC575640034E750 /* AppDelegate.swift */,
 				CF22B50E2BC575640034E750 /* SceneDelegate.swift */,
 				CF22B5102BC575640034E750 /* ViewController.swift */,
-				CF22B5122BC575640034E750 /* Main.storyboard */,
 				CF22B5152BC575650034E750 /* Assets.xcassets */,
 				CF22B5172BC575650034E750 /* LaunchScreen.storyboard */,
 				CF22B51A2BC575650034E750 /* Info.plist */,
 			);
 			path = "WBPO-Assignment";
+			sourceTree = "<group>";
+		};
+		CF22B5202BC575D70034E750 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5212BC575E00034E750 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CF22B5212BC575E00034E750 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5222BC575EA0034E750 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CF22B5242BC576880034E750 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5252BC576940034E750 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CF22B5252BC576940034E750 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B52C2BC576B00034E750 /* LoginCoordinator.swift */,
+				CF22B52A2BC576A80034E750 /* LoginViewModel.swift */,
+				CF22B5262BC5769B0034E750 /* LoginViewController.swift */,
+				CF22B5282BC576A20034E750 /* LoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FD66C16507E076CF73224D09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7438C600168BBF4E82E1614C /* Pods-WBPO-Assignment.debug.xcconfig */,
+				7AD3005D736CE3704F629F1B /* Pods-WBPO-Assignment.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF22B51D2BC575650034E750 /* Build configuration list for PBXNativeTarget "WBPO-Assignment" */;
 			buildPhases = (
+				E8E86A1BE895B9AE71B706D9 /* [CP] Check Pods Manifest.lock */,
 				CF22B5052BC575640034E750 /* Sources */,
 				CF22B5062BC575640034E750 /* Frameworks */,
 				CF22B5072BC575640034E750 /* Resources */,
+				289A998BF6FB7C8F6D989820 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,21 +195,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF22B5292BC576A20034E750 /* LoginViewController.storyboard in Resources */,
 				CF22B5192BC575650034E750 /* LaunchScreen.storyboard in Resources */,
 				CF22B5162BC575650034E750 /* Assets.xcassets in Resources */,
-				CF22B5142BC575640034E750 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		289A998BF6FB7C8F6D989820 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WBPO-Assignment/Pods-WBPO-Assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WBPO-Assignment/Pods-WBPO-Assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WBPO-Assignment/Pods-WBPO-Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8E86A1BE895B9AE71B706D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WBPO-Assignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF22B5052BC575640034E750 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF22B5232BC575EA0034E750 /* UIViewController+Extension.swift in Sources */,
 				CF22B5112BC575640034E750 /* ViewController.swift in Sources */,
+				CF22B52D2BC576B00034E750 /* LoginCoordinator.swift in Sources */,
+				CF22B52B2BC576A80034E750 /* LoginViewModel.swift in Sources */,
 				CF22B50D2BC575640034E750 /* AppDelegate.swift in Sources */,
+				CF22B5272BC5769B0034E750 /* LoginViewController.swift in Sources */,
 				CF22B50F2BC575640034E750 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +263,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF22B5122BC575640034E750 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF22B5132BC575640034E750 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF22B5172BC575650034E750 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,17 +395,18 @@
 		};
 		CF22B51E2BC575650034E750 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7438C600168BBF4E82E1614C /* Pods-WBPO-Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G98QS5K22V;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WBPO-Assignment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,17 +424,18 @@
 		};
 		CF22B51F2BC575650034E750 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AD3005D736CE3704F629F1B /* Pods-WBPO-Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G98QS5K22V;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WBPO-Assignment/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
