@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.9.1)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
     - RxSwift (= 6.6.0)
@@ -7,20 +8,23 @@ PODS:
   - RxSwift (6.6.0)
 
 DEPENDENCIES:
+  - Alamofire
   - RxCocoa (= 6.6.0)
   - RxSwift (= 6.6.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - RxCocoa
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
 
-PODFILE CHECKSUM: 46d6151b52b09175dd7e7dbeb91f840159826f4f
+PODFILE CHECKSUM: 560a9986008685094997125a728aec3229ebba0b
 
 COCOAPODS: 1.14.2

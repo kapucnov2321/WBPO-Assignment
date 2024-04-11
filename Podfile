@@ -9,5 +9,5 @@ target 'WBPO-Assignment' do
 
   pod 'RxSwift', '6.6.0'
   pod 'RxCocoa', '6.6.0'
-
+  pod 'Alamofire'
 end
