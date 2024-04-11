@@ -5,4 +5,25 @@
 //  Created by jan.matoniak on 11/04/2024.
 //
 
-import Foundation
+import UIKit
+
+class UserListViewController: UIViewController {
+    
+    var viewModel: UserListViewModelType?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        bindOutputs()
+        bindInputs()
+    }
+    
+    private func bindOutputs() {
+        
+        viewModel?.viewDidLoad()
+    }
+    
+    private func bindInputs() {
+        
+    }
+}

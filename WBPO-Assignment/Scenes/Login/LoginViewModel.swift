@@ -47,6 +47,7 @@ class LoginViewModel: LoginViewModelType {
             .subscribe(
                 onNext: { [weak self] result in
                     self?.coordinator.hideLoader()
+                    self?.coordinator.showUserList()
                 },
                 onError: { [weak self] error in
                     self?.coordinator.hideLoader()

@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginCoordinatorType: BaseCoordinator {
     func start() -> UIViewController
+    func showUserList()
 }
 
 class LoginCoordinator: LoginCoordinatorType {
@@ -24,6 +25,11 @@ class LoginCoordinator: LoginCoordinatorType {
         self.navigationController = navigationVC
 
         return navigationVC
+    }
+    
+    func showUserList() {
+        let ulCoordinator = UserListCoordinator()
+        ulCoordinator.start(navigationController: navigationController)
     }
     
 }
