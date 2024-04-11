@@ -23,6 +23,16 @@
 		CF22B5372BC7F2A80034E750 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5362BC7F2A80034E750 /* RegisterResponseModel.swift */; };
 		CF22B5392BC7F86C0034E750 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5382BC7F86C0034E750 /* ErrorModel.swift */; };
 		CF22B53D2BC803350034E750 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B53C2BC803350034E750 /* UIView+Extension.swift */; };
+		CF22B5412BC821E30034E750 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5402BC821E30034E750 /* KeychainService.swift */; };
+		CF22B5432BC8221F0034E750 /* KeychainService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5422BC8221F0034E750 /* KeychainService+Extensions.swift */; };
+		CF22B5462BC8227E0034E750 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5452BC8227E0034E750 /* UserCredentials.swift */; };
+		CF22B5492BC82E630034E750 /* UserListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5482BC82E630034E750 /* UserListCoordinator.swift */; };
+		CF22B54B2BC82E690034E750 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B54A2BC82E680034E750 /* UserListViewModel.swift */; };
+		CF22B54D2BC82E710034E750 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B54C2BC82E710034E750 /* UserListViewController.swift */; };
+		CF22B54F2BC82E770034E750 /* UserListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22B54E2BC82E770034E750 /* UserListViewController.storyboard */; };
+		CF22B5512BC830140034E750 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5502BC830140034E750 /* BaseCoordinator.swift */; };
+		CF22B5572BC8311C0034E750 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5562BC8311C0034E750 /* LoadingView.swift */; };
+		CF22B5592BC8312E0034E750 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF22B5582BC8312E0034E750 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +56,16 @@
 		CF22B5362BC7F2A80034E750 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		CF22B5382BC7F86C0034E750 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		CF22B53C2BC803350034E750 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		CF22B5402BC821E30034E750 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		CF22B5422BC8221F0034E750 /* KeychainService+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainService+Extensions.swift"; sourceTree = "<group>"; };
+		CF22B5452BC8227E0034E750 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
+		CF22B5482BC82E630034E750 /* UserListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCoordinator.swift; sourceTree = "<group>"; };
+		CF22B54A2BC82E680034E750 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		CF22B54C2BC82E710034E750 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		CF22B54E2BC82E770034E750 /* UserListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserListViewController.storyboard; sourceTree = "<group>"; };
+		CF22B5502BC830140034E750 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		CF22B5562BC8311C0034E750 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CF22B5582BC8312E0034E750 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +123,10 @@
 		CF22B5202BC575D70034E750 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CF22B5302BC7F0720034E750 /* Networking */,
+				CF22B5542BC831110034E750 /* Views */,
+				CF22B53E2BC820EC0034E750 /* Services */,
 				CF22B5212BC575E00034E750 /* Extensions */,
+				CF22B5502BC830140034E750 /* BaseCoordinator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -121,6 +143,7 @@
 		CF22B5242BC576880034E750 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CF22B5472BC82E460034E750 /* User List */,
 				CF22B5252BC576940034E750 /* Login */,
 			);
 			path = Scenes;
@@ -155,6 +178,61 @@
 				CF22B5382BC7F86C0034E750 /* ErrorModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CF22B53E2BC820EC0034E750 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B53F2BC820F60034E750 /* Keychain */,
+				CF22B5302BC7F0720034E750 /* Networking */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		CF22B53F2BC820F60034E750 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5442BC822750034E750 /* Model */,
+				CF22B5402BC821E30034E750 /* KeychainService.swift */,
+				CF22B5422BC8221F0034E750 /* KeychainService+Extensions.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		CF22B5442BC822750034E750 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5452BC8227E0034E750 /* UserCredentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF22B5472BC82E460034E750 /* User List */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5482BC82E630034E750 /* UserListCoordinator.swift */,
+				CF22B54A2BC82E680034E750 /* UserListViewModel.swift */,
+				CF22B54C2BC82E710034E750 /* UserListViewController.swift */,
+				CF22B54E2BC82E770034E750 /* UserListViewController.storyboard */,
+			);
+			path = "User List";
+			sourceTree = "<group>";
+		};
+		CF22B5542BC831110034E750 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5552BC831150034E750 /* LoadingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF22B5552BC831150034E750 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				CF22B5562BC8311C0034E750 /* LoadingView.swift */,
+				CF22B5582BC8312E0034E750 /* LoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		FD66C16507E076CF73224D09 /* Pods */ = {
@@ -228,7 +306,9 @@
 			files = (
 				CF22B5292BC576A20034E750 /* LoginViewController.storyboard in Resources */,
 				CF22B5192BC575650034E750 /* LaunchScreen.storyboard in Resources */,
+				CF22B54F2BC82E770034E750 /* UserListViewController.storyboard in Resources */,
 				CF22B5162BC575650034E750 /* Assets.xcassets in Resources */,
+				CF22B5592BC8312E0034E750 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +364,23 @@
 				CF22B5232BC575EA0034E750 /* UIViewController+Extension.swift in Sources */,
 				CF22B5372BC7F2A80034E750 /* RegisterResponseModel.swift in Sources */,
 				CF22B52F2BC7EF240034E750 /* ApiRoutes.swift in Sources */,
+				CF22B5492BC82E630034E750 /* UserListCoordinator.swift in Sources */,
 				CF22B5352BC7F2210034E750 /* ApiClient.swift in Sources */,
+				CF22B5572BC8311C0034E750 /* LoadingView.swift in Sources */,
+				CF22B54D2BC82E710034E750 /* UserListViewController.swift in Sources */,
 				CF22B5392BC7F86C0034E750 /* ErrorModel.swift in Sources */,
+				CF22B54B2BC82E690034E750 /* UserListViewModel.swift in Sources */,
 				CF22B52D2BC576B00034E750 /* LoginCoordinator.swift in Sources */,
 				CF22B53D2BC803350034E750 /* UIView+Extension.swift in Sources */,
+				CF22B5412BC821E30034E750 /* KeychainService.swift in Sources */,
 				CF22B52B2BC576A80034E750 /* LoginViewModel.swift in Sources */,
 				CF22B50D2BC575640034E750 /* AppDelegate.swift in Sources */,
 				CF22B5272BC5769B0034E750 /* LoginViewController.swift in Sources */,
 				CF22B5332BC7F0820034E750 /* RegisterRequestModel.swift in Sources */,
+				CF22B5512BC830140034E750 /* BaseCoordinator.swift in Sources */,
+				CF22B5432BC8221F0034E750 /* KeychainService+Extensions.swift in Sources */,
 				CF22B50F2BC575640034E750 /* SceneDelegate.swift in Sources */,
+				CF22B5462BC8227E0034E750 /* UserCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,13 +41,15 @@ class LoginViewModel: LoginViewModelType {
             return
         }
 
+        coordinator.showLoader()
         ApiClient.register(credentials: RegisterRequestModel(email: email, password: password))
             .observe(on: MainScheduler.instance)
             .subscribe(
-                onNext: { result in
-                    print(result)
+                onNext: { [weak self] result in
+                    self?.coordinator.hideLoader()
                 },
                 onError: { [weak self] error in
+                    self?.coordinator.hideLoader()
                     self?.errorMessage.onNext(error.localizedDescription)
                 }
             )
@@ -63,12 +65,8 @@ extension LoginViewModel {
     private func bindRegisterButtonEnable() {
         Observable
             .combineLatest(username.map { $0?.count ?? 0 >= 5 }, password.map { $0?.count ?? 0 >= 5 })
-            .map {
-                $0 && $1
-            }
-            .subscribe {
-                self.isRegisterEnabled.onNext($0)
-            }
+            .map { $0 && $1 }
+            .subscribe { self.isRegisterEnabled.onNext($0) }
             .disposed(by: bag)
     }
 

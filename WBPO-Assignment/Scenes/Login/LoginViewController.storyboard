@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="60" width="280" height="393.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4f8-7m-Xl6">
-                                        <rect key="frame" x="0.0" y="107.5" width="280" height="179"/>
+                                        <rect key="frame" x="0.0" y="92.5" width="280" height="209"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rQB-G0-iew">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="74.5"/>
@@ -54,12 +54,23 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prihlasovacie meno alebo heslo nemôže byť kratšie ako 5 znakov" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-Ue-FBK">
-                                                <rect key="frame" x="0.0" y="179" width="280" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" systemColor="systemRedColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eng-a9-ZkG">
+                                                <rect key="frame" x="0.0" y="209" width="280" height="0.0"/>
+                                                <subviews>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prihlasovacie meno alebo heslo nemôže byť kratšie ako 5 znakov" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wi-9v-H2a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="365.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prihlasovacie meno alebo heslo nemôže byť kratšie ako 5 znakov" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-Ue-FBK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="365.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -92,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="errorTooltip" destination="bAw-Ue-FBK" id="dNb-jU-TIN"/>
+                        <outlet property="lengthTooltip" destination="1Wi-9v-H2a" id="zVD-ce-M7L"/>
                         <outlet property="loginBottomConstraint" destination="ijp-EB-mgL" id="ekw-hc-p7H"/>
                         <outlet property="loginButton" destination="ooP-Yo-yuB" id="RhF-9y-Edm"/>
                         <outlet property="passwordTextField" destination="ptR-hJ-0bO" id="o2t-bg-8Ew"/>

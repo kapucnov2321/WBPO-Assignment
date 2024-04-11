@@ -17,6 +17,15 @@ extension UIView {
         setViewVisibility(isHidden: false, completion: completion)
     }
     
+    func embed(view: UIView, topConstant: CGFloat = 0, bottomConstant: CGFloat = 0, leadingConstant: CGFloat = 0, trailingConstant: CGFloat = 0) {
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: view.topAnchor, constant: topConstant),
+            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomConstant),
+            leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingConstant),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: trailingConstant)
+        ])
+    }
+    
     private func setViewVisibility(isHidden: Bool, completion: ((Bool) -> Void)?) {
         UIView.transition(
             with: self,

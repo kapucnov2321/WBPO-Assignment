@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol LoginCoordinatorType {
+protocol LoginCoordinatorType: BaseCoordinator {
     func start() -> UIViewController
 }
 
 class LoginCoordinator: LoginCoordinatorType {
-    private weak var viewController: LoginViewController?
-    private weak var navigationController: UINavigationController?
+    weak var viewController: UIViewController?
+    weak var navigationController: UINavigationController?
 
     func start() -> UIViewController {
         let vc = LoginViewController.instantiate()

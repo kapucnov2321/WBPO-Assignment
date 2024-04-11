@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorTooltip: UILabel!
+    @IBOutlet weak var lengthTooltip: UILabel!
     @IBOutlet weak var loginBottomConstraint: NSLayoutConstraint!
     
     private let bag = DisposeBag()
@@ -32,18 +33,28 @@ class LoginViewController: UIViewController {
         guard let viewModel else { return }
 
         usernameTextField.rx.text
+            .filter {
+                $0 != ""
+            }
             .bind(to: viewModel.username)
             .disposed(by: bag)
         
+        usernameTextField.rx.controlEvent([.editingDidEndOnExit])
+            .subscribe(onNext: {[weak self] in
+                self?.passwordTextField.becomeFirstResponder()
+            })
+            .disposed(by: bag)
+    
         passwordTextField.rx.text
+            .filter {
+                $0 != ""
+            }
             .bind(to: viewModel.password)
             .disposed(by: bag)
         
         loginButton.rx
             .tap
-            .bind {
-                viewModel.register()
-            }
+            .bind { viewModel.register() }
             .disposed(by: bag)
 
         viewModel.viewDidLoad()
@@ -53,6 +64,13 @@ class LoginViewController: UIViewController {
         viewModel?.isRegisterEnabled
             .asDriver(onErrorJustReturn: false)
             .drive(loginButton.rx.isEnabled)
+            .disposed(by: bag)
+        
+        viewModel?.isRegisterEnabled
+            .skip(1)
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+            .asDriver(onErrorJustReturn: false)
+            .drive(lengthTooltip.rx.isHidden)
             .disposed(by: bag)
         
         viewModel?.errorMessage
