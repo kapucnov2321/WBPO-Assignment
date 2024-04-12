@@ -69,5 +69,4 @@ class UserListViewController: UIViewController {
         }
         .disposed(by: bag)
     }
-
 }

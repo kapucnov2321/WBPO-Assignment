@@ -13,15 +13,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        if !(UserDefaults.passedFirstRun ?? false) {
+            KeychainService.credentials = nil
+            UserDefaults.passedFirstRun = true
+        }
+
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let coordinator = LoginCoordinator()
-        let initialVC = coordinator.start()
-        window.rootViewController = initialVC
-        
-        self.window = window
-        window.makeKeyAndVisible()
+    
+        if KeychainService.credentials == nil {
+            let coordinator = LoginCoordinator()
+            let initialVC = coordinator.start()
+            window.rootViewController = initialVC
+            
+            self.window = window
+            window.makeKeyAndVisible()
+        } else {
+            let coordinator = UserListCoordinator()
+            let initialVc = UINavigationController()
+            window.rootViewController = initialVc
+            
+            coordinator.start(navigationController: initialVc)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

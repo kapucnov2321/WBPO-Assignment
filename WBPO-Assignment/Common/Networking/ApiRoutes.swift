@@ -85,7 +85,7 @@ enum ApiRoutes: URLRequestConvertible {
         switch self {
         case .register(let credentials):
             return credentials.parameterRepresentation
-        case .users(page: let page):
+        case .users:
             return nil
         }
     }

@@ -36,6 +36,7 @@
 		CF22B55B2BC945950034E750 /* UsersResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B55A2BC945950034E750 /* UsersResponseModel.swift */; };
 		CF4DF2072BC953FC00C142B3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DF2052BC953FC00C142B3 /* UserTableViewCell.swift */; };
 		CF4DF2082BC953FC00C142B3 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4DF2062BC953FC00C142B3 /* UserTableViewCell.xib */; };
+		CF4DF20B2BC97AEE00C142B3 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DF20A2BC97AEE00C142B3 /* UserDefaults+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		CF22B55A2BC945950034E750 /* UsersResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponseModel.swift; sourceTree = "<group>"; };
 		CF4DF2052BC953FC00C142B3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		CF4DF2062BC953FC00C142B3 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		CF4DF20A2BC97AEE00C142B3 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		CF22B5212BC575E00034E750 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CF4DF20A2BC97AEE00C142B3 /* UserDefaults+Extension.swift */,
 				CF22B5222BC575EA0034E750 /* UIViewController+Extension.swift */,
 				CF22B53C2BC803350034E750 /* UIView+Extension.swift */,
 			);
@@ -383,6 +386,7 @@
 				CF22B5372BC7F2A80034E750 /* RegisterResponseModel.swift in Sources */,
 				CF4DF2072BC953FC00C142B3 /* UserTableViewCell.swift in Sources */,
 				CF22B55B2BC945950034E750 /* UsersResponseModel.swift in Sources */,
+				CF4DF20B2BC97AEE00C142B3 /* UserDefaults+Extension.swift in Sources */,
 				CF22B52F2BC7EF240034E750 /* ApiRoutes.swift in Sources */,
 				CF22B5492BC82E630034E750 /* UserListCoordinator.swift in Sources */,
 				CF22B5352BC7F2210034E750 /* ApiClient.swift in Sources */,
@@ -553,6 +557,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +587,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

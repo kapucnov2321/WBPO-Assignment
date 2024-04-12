@@ -12,15 +12,24 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var followButton: UIButton!
     
+    var onButtonTap: (() -> Void)?
+    
+    private let bag = DisposeBag()
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    @IBAction func tappedFollowButton(_ sender: UIButton) {
+        onButtonTap?()
+    }
+
     func setupCell(user: User) {
         userNameLabel.text = "\(user.firstName) \(user.lastName)"
         userEmailLabel.text = user.email
-        
+
         if let imageData = user.imageData {
             userImage.image = UIImage(data: imageData)
         }

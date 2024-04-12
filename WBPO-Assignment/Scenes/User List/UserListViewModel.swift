@@ -30,6 +30,7 @@ class UserListViewModel: UserListViewModelType {
     }
 
     override func viewDidLoad() {
+        coordinator.showLoader()
         fetchUserList()
     }
     
@@ -60,7 +61,6 @@ class UserListViewModel: UserListViewModelType {
             }
             .observe(on: MainScheduler.instance)
             .delay(.seconds(1), scheduler: MainScheduler.instance)
-            .debug()
             .subscribe(
                 onNext: { [weak self] result in
                     guard let self else { return }

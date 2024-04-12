@@ -33,11 +33,6 @@ class LoginViewModel: LoginViewModelType {
     }
     
     override func viewDidLoad() {
-        guard KeychainService.credentials == nil else {
-            coordinator.showUserList()
-            return
-        }
-
         bindRegisterButtonEnable()
     }
     

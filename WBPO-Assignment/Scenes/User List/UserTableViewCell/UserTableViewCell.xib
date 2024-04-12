@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8oo-Be-6wp">
-                                <rect key="frame" x="164" y="48.333333333333329" width="359" height="47.333333333333329"/>
+                                <rect key="frame" x="163.99999999999997" y="48.333333333333329" width="266.33333333333326" height="47.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-lj-dEL">
                                         <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
@@ -39,6 +39,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E81-dI-TL9">
+                                <rect key="frame" x="450.33333333333331" y="55" width="72.666666666666686" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Follow"/>
+                                <connections>
+                                    <action selector="tappedFollowButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Uhy-Kw-DKb"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -51,6 +59,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="followButton" destination="E81-dI-TL9" id="WKG-Od-bO7"/>
                 <outlet property="userEmailLabel" destination="9Au-zQ-c6X" id="58I-m6-faW"/>
                 <outlet property="userImage" destination="JlP-10-zbx" id="zOo-CJ-2k4"/>
                 <outlet property="userNameLabel" destination="8FU-lj-dEL" id="Lsa-wd-JFU"/>
