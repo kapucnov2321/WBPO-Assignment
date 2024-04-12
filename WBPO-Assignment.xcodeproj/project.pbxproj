@@ -33,6 +33,9 @@
 		CF22B5512BC830140034E750 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5502BC830140034E750 /* BaseCoordinator.swift */; };
 		CF22B5572BC8311C0034E750 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B5562BC8311C0034E750 /* LoadingView.swift */; };
 		CF22B5592BC8312E0034E750 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF22B5582BC8312E0034E750 /* LoadingView.xib */; };
+		CF22B55B2BC945950034E750 /* UsersResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22B55A2BC945950034E750 /* UsersResponseModel.swift */; };
+		CF4DF2072BC953FC00C142B3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DF2052BC953FC00C142B3 /* UserTableViewCell.swift */; };
+		CF4DF2082BC953FC00C142B3 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4DF2062BC953FC00C142B3 /* UserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		CF22B5502BC830140034E750 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		CF22B5562BC8311C0034E750 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CF22B5582BC8312E0034E750 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		CF22B55A2BC945950034E750 /* UsersResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponseModel.swift; sourceTree = "<group>"; };
+		CF4DF2052BC953FC00C142B3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		CF4DF2062BC953FC00C142B3 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 			children = (
 				CF22B5322BC7F0820034E750 /* RegisterRequestModel.swift */,
 				CF22B5362BC7F2A80034E750 /* RegisterResponseModel.swift */,
+				CF22B55A2BC945950034E750 /* UsersResponseModel.swift */,
 				CF22B5382BC7F86C0034E750 /* ErrorModel.swift */,
 			);
 			path = Model;
@@ -210,6 +217,7 @@
 		CF22B5472BC82E460034E750 /* User List */ = {
 			isa = PBXGroup;
 			children = (
+				CF4DF2042BC953E900C142B3 /* UserTableViewCell */,
 				CF22B5482BC82E630034E750 /* UserListCoordinator.swift */,
 				CF22B54A2BC82E680034E750 /* UserListViewModel.swift */,
 				CF22B54C2BC82E710034E750 /* UserListViewController.swift */,
@@ -233,6 +241,15 @@
 				CF22B5582BC8312E0034E750 /* LoadingView.xib */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		CF4DF2042BC953E900C142B3 /* UserTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF4DF2052BC953FC00C142B3 /* UserTableViewCell.swift */,
+				CF4DF2062BC953FC00C142B3 /* UserTableViewCell.xib */,
+			);
+			path = UserTableViewCell;
 			sourceTree = "<group>";
 		};
 		FD66C16507E076CF73224D09 /* Pods */ = {
@@ -308,6 +325,7 @@
 				CF22B5192BC575650034E750 /* LaunchScreen.storyboard in Resources */,
 				CF22B54F2BC82E770034E750 /* UserListViewController.storyboard in Resources */,
 				CF22B5162BC575650034E750 /* Assets.xcassets in Resources */,
+				CF4DF2082BC953FC00C142B3 /* UserTableViewCell.xib in Resources */,
 				CF22B5592BC8312E0034E750 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +381,8 @@
 			files = (
 				CF22B5232BC575EA0034E750 /* UIViewController+Extension.swift in Sources */,
 				CF22B5372BC7F2A80034E750 /* RegisterResponseModel.swift in Sources */,
+				CF4DF2072BC953FC00C142B3 /* UserTableViewCell.swift in Sources */,
+				CF22B55B2BC945950034E750 /* UsersResponseModel.swift in Sources */,
 				CF22B52F2BC7EF240034E750 /* ApiRoutes.swift in Sources */,
 				CF22B5492BC82E630034E750 /* UserListCoordinator.swift in Sources */,
 				CF22B5352BC7F2210034E750 /* ApiClient.swift in Sources */,

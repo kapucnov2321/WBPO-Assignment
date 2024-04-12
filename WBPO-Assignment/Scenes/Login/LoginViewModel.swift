@@ -33,6 +33,11 @@ class LoginViewModel: LoginViewModelType {
     }
     
     override func viewDidLoad() {
+        guard KeychainService.credentials == nil else {
+            coordinator.showUserList()
+            return
+        }
+
         bindRegisterButtonEnable()
     }
     
@@ -46,6 +51,8 @@ class LoginViewModel: LoginViewModelType {
             .observe(on: MainScheduler.instance)
             .subscribe(
                 onNext: { [weak self] result in
+                    KeychainService.credentials = UserCredentials(email: email, password: password)
+            
                     self?.coordinator.hideLoader()
                     self?.coordinator.showUserList()
                 },

@@ -9,7 +9,7 @@ import Foundation
 
 extension KeychainService {
     
-    var credentials: UserCredentials? {
+    static var credentials: UserCredentials? {
         get {
             let keychainResult: KeychainLoadResult<UserCredentials> = KeychainService.load(key: "credentials")
             
