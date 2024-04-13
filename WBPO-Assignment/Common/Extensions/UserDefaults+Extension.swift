@@ -18,4 +18,14 @@ extension UserDefaults {
             UserDefaults.standard.setValue(newValue, forKey: "passedFirstRun")
         }
     }
+    
+    static var followedUsers: [Int] {
+        get {
+            UserDefaults.standard.array(forKey: "followedUsers") as? [Int] ?? []
+        }
+        
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "followedUsers")
+        }
+    }
 }

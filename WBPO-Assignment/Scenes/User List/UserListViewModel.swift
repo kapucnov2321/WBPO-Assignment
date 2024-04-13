@@ -11,7 +11,7 @@ import RxSwift
 class UserListViewModelType {
     
     //OUTPUT
-    let userList = BehaviorSubject<[User]>(value: [])
+    let userList = BehaviorSubject<[UserTableViewCellDataModel]>(value: [])
     let showLoadingSpinner = PublishSubject<Bool>()
 
     func viewDidLoad() {}
@@ -72,7 +72,7 @@ class UserListViewModel: UserListViewModelType {
                     coordinator.hideLoader()
                     
                     var currentUsers = (try? userList.value()) ?? []
-                    currentUsers.append(contentsOf: result.users)
+                    currentUsers.append(contentsOf: mapToCellDataModel(users: result.users))
     
                     userList.onNext(currentUsers)
                 },
@@ -82,5 +82,47 @@ class UserListViewModel: UserListViewModelType {
                 }
             )
             .disposed(by: bag)
+    }
+    
+    private func mapToCellDataModel(users: [User]) -> [UserTableViewCellDataModel] {
+        let refreshFollowed = BehaviorSubject<Void>(value: ())
+        let userDataModel = users
+            .map { [weak self] user -> UserTableViewCellDataModel? in
+                guard let self else { return nil }
+    
+                let onFollowTap = PublishSubject<Int>()
+            
+                onFollowTap
+                    .subscribe(
+                    onNext: { [weak self] id in
+                        guard let self else { return }
+        
+                        followOrUnfollowUser(id: id)
+                        refreshFollowed.onNext(())
+                    }
+                )
+                .disposed(by: bag)
+                
+                return UserTableViewCellDataModel(
+                    user: user,
+                    refreshFollowed: refreshFollowed,
+                    onFollowTap: onFollowTap
+                )
+            }
+            .compactMap { $0 }
+        
+        return userDataModel
+    }
+
+    func followOrUnfollowUser(id: Int) {
+        let followed = UserDefaults.followedUsers.contains { $0 == id }
+        
+        if followed {
+            UserDefaults.followedUsers = UserDefaults.followedUsers.filter { $0 != id }
+        } else {
+            var followedUsers = UserDefaults.followedUsers
+            followedUsers.append(id)
+            UserDefaults.followedUsers = followedUsers
+        }
     }
 }

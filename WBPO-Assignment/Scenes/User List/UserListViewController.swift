@@ -55,8 +55,8 @@ class UserListViewController: UIViewController {
 
         viewModel?.userList
             .bind(to: tableView.rx
-                .items(cellIdentifier: "UserTableViewCell", cellType: UserTableViewCell.self)) { (row,item,cell) in
-                    cell.setupCell(user: item)
+                .items(cellIdentifier: "UserTableViewCell", cellType: UserTableViewCell.self)) { [weak self] (row,item,cell) in
+                    cell.setupCell(data: item)
             }
             .disposed(by: bag)
         
